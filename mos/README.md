@@ -55,6 +55,7 @@ This folder contains the implementations of additional objective evaluation metr
     fi
 
     inf_scp=enhanced.scp
+    output_prefix=outdir
 
     pids=() # initialize pids
     for idx in $(seq ${nj}); do
@@ -116,6 +117,7 @@ This folder contains the implementations of additional objective evaluation metr
     fi
 
     inf_scp=enhanced.scp
+    output_prefix=outdir
 
     pids=() # initialize pids
     for idx in $(seq ${nj}); do
@@ -187,6 +189,7 @@ This folder contains the implementations of additional objective evaluation metr
     fi
 
     inf_scp=enhanced.scp
+    output_prefix=outdir
 
     pids=() # initialize pids
     for idx in $(seq ${nj}); do
@@ -246,6 +249,7 @@ This folder contains the implementations of additional objective evaluation metr
     fi
 
     inf_scp=enhanced.scp
+    output_prefix=outdir
 
     pids=() # initialize pids
     for idx in $(seq ${nj}); do
@@ -287,3 +291,8 @@ This folder contains the implementations of additional objective evaluation metr
     ```
 
     </div></details>
+
+The above commands will run evaluation on the enhanced speech samples listed in `enhanced.scp` and save the results in the `outdir/scoring_*` directory.
+
+The results will be saved in a scp file named `*.scp` and a text file named `RESULTS.txt` under a subdirectory corresponding to each metric.
+The scp file will contain the detailed metric value for each enhanced speech sample, while the `RESULTS.txt` file will contain the average metric value across all samples.

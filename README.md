@@ -40,7 +40,7 @@ The detailed definitions of the hard samples and tags can be found in [tagging/R
 
 We also calculated the correlation between the human-annotated Mean Opinion Scores (MOS) and different objective metrics on the blind test data. The objective metrics include:
 
-> The <span style="color:#e97c36;">metrics in orange</span> have not been used during the challenge. The rest are the metrics used officially in the challenge.
+> The <span style="color:#e97c36;">metrics in orange</span> (DNSMOS Pro, UTMOS, WV-MOS, SCOREQ, VQScore, and WADA-SNR) have not been used during the challenge. The rest are the metrics used officially in the challenge.
 
 <table>
 <thead>
