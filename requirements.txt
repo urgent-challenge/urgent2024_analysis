@@ -1,0 +1,6 @@
+librosa
+numpy
+soundfile
+soxr
+torch
+tqdm
