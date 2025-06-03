@@ -1,6 +1,6 @@
 ## Introduction
 
-This is the official repository for the paper: [Lessons Learned from the URGENT 2024 Speech Enhancement Challenge](). We will refer to it as the **URGENT 2024 analysis paper** below for brevity.
+This is the official repository for the paper: [Lessons Learned from the URGENT 2024 Speech Enhancement Challenge](https://arxiv.org/abs/2506.01611). We will refer to it as the **URGENT 2024 analysis paper** below for brevity.
 
 ### Table of Contents
 
@@ -11,7 +11,7 @@ This is the official repository for the paper: [Lessons Learned from the URGENT 
 
 ### WADA-SNR
 
-The [WADA-SNR algorithm](https://www.isca-archive.org/interspeech_2008/kim08e_interspeech.html) was adopted to roughly analyze the signal-to-noise ratio (SNR) distribution of the [datasets](https://huggingface.co/datasets/urgent-challenge/urgent2024_official) used in the URGENT 2024 Speech Enhancement Challenge. Our implementation of the WADA-SNR algorithm is provided at [wada_snr/calculate_wada_snr.py](wada_snr/calculate_wada_snr.py). The analysis results can be found below:
+The [WADA-SNR algorithm](https://www.isca-archive.org/interspeech_2008/kim08e_interspeech.html) was adopted to roughly analyze the signal-to-noise ratio (SNR) distribution of the reference speech samples in the [datasets](https://huggingface.co/datasets/urgent-challenge/urgent2024_official) used in the URGENT 2024 Speech Enhancement Challenge. Our implementation of the WADA-SNR algorithm is provided at [wada_snr/](wada_snr/). The analysis results can be found below:
 
 ![wada_snr/wada_snr_analysis.png](wada_snr/wada_snr_analysis.png)
 
@@ -40,7 +40,8 @@ The detailed definitions of the hard samples and tags can be found in [tagging/R
 
 We also calculated the correlation between the human-annotated Mean Opinion Scores (MOS) and different objective metrics on the blind test data. The objective metrics include:
 
-> The <span style="color:#e97c36;">metrics in orange</span> (DNSMOS Pro, UTMOS, WV-MOS, SCOREQ, VQScore, and WADA-SNR) have not been used during the challenge. The rest are the metrics used officially in the challenge.
+> The <span style="color:#e97c36;">metrics in orange</span> (DNSMOS Pro, UTMOS, WV-MOS, SCOREQ, VQScore, and WADA-SNR) have not been used during the challenge. The implementations of these additional metrics are provided in [mos/](mos/).
+> The rest are the metrics used officially in the challenge, and their implementations are available in [https://github.com/urgent-challenge/urgent2024_challenge/tree/main/evaluation_metrics](https://github.com/urgent-challenge/urgent2024_challenge/tree/main/evaluation_metrics).
 
 <table>
 <thead>
@@ -194,7 +195,7 @@ The correlations between MOS and different objective metrics in the blind test d
 > This is the refined version of Figure 4 in the URGENT 2024 analysis paper, with two major changes:
 >
 > 1. A new correlation measure, the Spearman's rank correlation coefficient (SRCC), is added.
-> 2. The overall ranking score calculated based solely on objective metrics (those colored in <span style="color:#2e67d3;">blue</span>) is added, denoted as<br/>[<span style="color:#377e22;">---- </span><span style="color:black;">Overall ranking score (w/o MOS)</span>]() in the figure.
+> 2. The overall ranking score calculated based solely on objective metrics (those colored in <span style="color:#2e67d3;">blue</span>) is added, denoted as<br/>[<span style="color:#377e22;">---- </span><span style="color:black;">Overall ranking score (w/o MOS)</span>](#) in the figure.
 
 ![mos/mos_correlations.png](mos/mos_correlations.png)
 
@@ -208,5 +209,10 @@ The correlations between MOS and different objective metrics in the blind test d
 If you find this repository useful, please consider citing our paper:
 
 ```bibtex
-
+@article{Lessons-Zhang2025,
+  title={Lessons Learned from the {URGENT} 2024 Speech Enhancement Challenge},
+  author={Zhang, Wangyou and Saijo, Kohei and Cornell, Samuele and Scheibler, Robin and Li, Chenda and Ni, Zhaoheng and Kumar, Anurag and Sach, Marvin and Wang, Wei and Fu, Yihui and Watanabe, Shinji and Fingscheidt, Tim and Qian, Yanmin},
+  journal={arXiv preprint arXiv:2506.01611},
+  year={2025},
+}
 ```

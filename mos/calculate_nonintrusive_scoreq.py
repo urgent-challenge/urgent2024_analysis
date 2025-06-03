@@ -61,6 +61,9 @@ def main(args):
         metric: (outdir / f"{metric}{suffix}.scp").open("w") for metric in METRICS
     }
 
+    # The models will be downloaded to ./pt-models/ for the first time
+    # https://dl.fbaipublicfiles.com/fairseq/wav2vec/wav2vec_small.pt
+    # https://zenodo.org/records/13860326/files/adapt_nr_telephone.pt
     model = scoreq.Scoreq(device=args.device, data_domain="natural", mode="nr")
     ret = []
     for uid, inf_audio in tqdm(data_pairs):
