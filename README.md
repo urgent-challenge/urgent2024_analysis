@@ -1,6 +1,6 @@
 ## Introduction
 
-This is the official repository for the paper: [Lessons Learned from the URGENT 2024 Speech Enhancement Challenge](https://arxiv.org/abs/2506.01611). We will refer to it as the **URGENT 2024 analysis paper** below for brevity.
+This is the official repository for the Interspeech 2025 paper: [Lessons Learned from the URGENT 2024 Speech Enhancement Challenge](https://arxiv.org/abs/2506.01611). We will refer to it as the **URGENT 2024 analysis paper** below for brevity.
 
 ### Table of Contents
 
@@ -209,10 +209,13 @@ The correlations between MOS and different objective metrics in the blind test d
 If you find this repository useful, please consider citing our paper:
 
 ```bibtex
-@article{Lessons-Zhang2025,
+@inproceedings{Lessons-Zhang2025,
   title={Lessons Learned from the {URGENT} 2024 Speech Enhancement Challenge},
   author={Zhang, Wangyou and Saijo, Kohei and Cornell, Samuele and Scheibler, Robin and Li, Chenda and Ni, Zhaoheng and Kumar, Anurag and Sach, Marvin and Wang, Wei and Fu, Yihui and Watanabe, Shinji and Fingscheidt, Tim and Qian, Yanmin},
-  journal={arXiv preprint arXiv:2506.01611},
+  booktitle={Proc. Interspeech},
+  pages={853--857},
   year={2025},
+  doi={10.21437/Interspeech.2025-1246},
+  url={https://www.isca-archive.org/interspeech_2025/zhang25j_interspeech.html},
 }
 ```
